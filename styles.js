@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\nbody {\n    background-image: url('depositphotos_106230918-stock-photo-square-background-from-yellow-crumpled.jpg'); /* Путь к фоновому изображению */\n    background-repeat: no-repeat;\n    width: 100%;\n    height: 100%;\n    background-attachment:fixed;\n    background-size: 100%;\n}\n"
 
 /***/ }),
 
