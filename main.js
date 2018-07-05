@@ -215,8 +215,7 @@ var FriendsComponent = /** @class */ (function () {
         this.friendItems = [];
     }
     FriendsComponent.prototype.ngOnInit = function () {
-        // this.friend = this.appService.getFriends()
-        // console.log('dataVK', this.friend);
+        this.friendItems = this.appService.getFriends();
     };
     FriendsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -305,44 +304,86 @@ var LoginComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppService", function() { return AppService; });
-/* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var rxjs_add_operator_toPromise__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/add/operator/toPromise */ "./node_modules/rxjs-compat/_esm5/add/operator/toPromise.js");
-/* harmony import */ var rxjs_add_operator_toPromise__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(rxjs_add_operator_toPromise__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs_add_operator_toPromise__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/add/operator/toPromise */ "./node_modules/rxjs-compat/_esm5/add/operator/toPromise.js");
+/* harmony import */ var rxjs_add_operator_toPromise__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rxjs_add_operator_toPromise__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data */ "./src/app/shared/data.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 
 
 var AppService = /** @class */ (function () {
-    function AppService(http) {
-        this.http = http;
+    function AppService() {
+        this.friendItems = _data__WEBPACK_IMPORTED_MODULE_2__["friendItems"];
+        // constructor(private http: Http) {}
+        // public getFriends(): Promise<any> {
+        //     return this.http.get('https://api.vk.com/method/users.get?user_id=90235732&v=5.52&access_token=cefb84567318c602978bdcd1b33d2c80490ad8e746a646b5172e095c7b55a275c1d567b1765aebe01cd6d')
+        //         .toPromise()
+        //         .then(res => res.json().data)
+        //         .then(frined => this.frined = frined)
+        //         .catch(this.handleError);
+        // }
+        // private handleError(error: any) {
+        //     console.log('ERROR!!!', error);
+        // }
     }
+    // frined: Array<Object>;
     AppService.prototype.getFriends = function () {
-        var _this = this;
-        return this.http.get('https://api.vk.com/method/users.get?user_id=90235732&v=5.52&access_token=cefb84567318c602978bdcd1b33d2c80490ad8e746a646b5172e095c7b55a275c1d567b1765aebe01cd6d')
-            .toPromise()
-            .then(function (res) { return res.json().data; })
-            .then(function (frined) { return _this.frined = frined; })
-            .catch(this.handleError);
-    };
-    AppService.prototype.handleError = function (error) {
-        console.log('ERROR!!!', error);
+        return this.friendItems;
     };
     AppService = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
-        __metadata("design:paramtypes", [_angular_http__WEBPACK_IMPORTED_MODULE_0__["Http"]])
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])()
     ], AppService);
     return AppService;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/app/shared/data.ts":
+/*!********************************!*\
+  !*** ./src/app/shared/data.ts ***!
+  \********************************/
+/*! exports provided: friendItems */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "friendItems", function() { return friendItems; });
+var friendItems = [
+    {
+        name: 'Anna',
+        surname: 'Ancxbvjf',
+        photo: 'https://www.istockphoto.com/resources/images/PhotoFTLP/img_63351521.jpg',
+        about: "Managing state transitions is one of the hardest parts of building applications."
+    }, {
+        name: 'Avrora',
+        surname: 'Dchngfjgh',
+        photo: 'https://assets.entrepreneur.com/content/3x2/1300/1413823428-amazingly-free-stock-websites.jpg?width=1000',
+        about: "preloadingStrategy configures a preloading strategy (see PreloadAllModules)."
+    }, {
+        name: 'Sergey',
+        surname: 'Lcvnhkhujk',
+        photo: 'https://www.rencontres-arles.com/files/media_file_2106.jpg',
+        about: "makes the router log all its internal events to the console."
+    }, {
+        name: 'Alexandra',
+        surname: 'Bdkfjgdffh',
+        photo: 'https://picjumbo.com/wp-content/uploads/young-girl-enjoying-moment-and-looking-over-the-city-of-san-francisco_free_stock_photos_picjumbo_HNCK3432-1080x720.jpg',
+        about: "RouterModule can be imported multiple times: once per lazily-loaded bundle."
+    }, {
+        name: 'Andrey',
+        surname: 'Kdfhfd',
+        photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6BNPDIE6TTynL_TocgS29g9kRiyNusgehb_MZ92C_0lvaWivVxg',
+        about: "For submodules and lazy loaded submodules the module should be used as follows:"
+    }
+];
 
 
 /***/ }),
