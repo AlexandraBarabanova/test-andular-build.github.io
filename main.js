@@ -281,8 +281,8 @@ var FriendsComponent = /** @class */ (function () {
         this.friendItems = [];
     }
     FriendsComponent.prototype.ngOnInit = function () {
-        this.friend = this.appService.getFriends();
-        console.log('dataVK', this.friend);
+        // this.friend = this.appService.getFriends()
+        // console.log('dataVK', this.friend);
     };
     FriendsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
